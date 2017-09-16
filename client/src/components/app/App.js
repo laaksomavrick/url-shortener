@@ -4,14 +4,15 @@ import './App.css';
 
 class App extends Component {
 
+    //todo router to redir
 
-  render() {
-    return (
-        <div className="container">
-            <Shortener/>
-        </div>
-    );
-  }
+    render() {
+        return (
+            <div className="container">
+                <Shortener/>
+            </div>
+        )
+    }
 
 
 }

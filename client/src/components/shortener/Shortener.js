@@ -10,7 +10,9 @@ class Shortener extends Component {
             url: ''
         }
         this.getValidationState = this.getValidationState.bind(this) 
-        this.handleChange = this.handleChange.bind(this)              
+        this.handleChange = this.handleChange.bind(this)           
+        this.handleKeyPress = this.handleKeyPress.bind(this)         
+        this.submit = this.submit.bind(this)                              
     }
 
     getValidationState() {
@@ -22,6 +24,21 @@ class Shortener extends Component {
 
     handleChange(e) {
         this.setState({ url: e.target.value });
+    }
+
+    handleKeyPress(e) {
+        if(e.charCode==13){
+            e.preventDefault()            
+                this.submit()   
+        }
+    }
+
+    submit() {
+        if (this.getValidationState() !== 'success') { return }
+
+        //todo post
+
+        console.log(this.state.url)
     }
 
     render() {
@@ -39,9 +56,14 @@ class Shortener extends Component {
                             value={this.state.url}
                             placeholder="Enter a url to shorten"
                             onChange={this.handleChange}
+                            onKeyPress={this.handleKeyPress}
                         />
                         <InputGroup.Button>
-                            <Button>Submit</Button>
+                            <Button
+                                onClick={this.submit}
+                            >
+                                Submit
+                            </Button>
                         </InputGroup.Button>
                         </InputGroup>
                     </FormGroup>
