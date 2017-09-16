@@ -1,9 +1,0 @@
-.container {
-    display: flex;
-    justify-content: center;   /* x axis center */
-    align-items: center;       /* y axis center */
-}
-
-.container-row {
-    width: auto;
-}
