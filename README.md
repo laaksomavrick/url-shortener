@@ -6,6 +6,6 @@ Make a `POST` with `{url: url}` and a key is received.
 
 ![alt text](https://raw.githubusercontent.com/laaksomavrick/url-shortener/master/img/post.png)
 
-Make a `GET` with 'http://url/key` and the long url it resolves to is returned as `{value: value}`
+Make a `GET` with `http://url/key` and the long url it resolves to is returned as `{value: value}`
 
 ![alt text](https://raw.githubusercontent.com/laaksomavrick/url-shortener/master/img/get.png)
